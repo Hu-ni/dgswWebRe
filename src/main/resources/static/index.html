@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script
+            src="http://code.jquery.com/jquery-3.3.1.js"
+            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+            crossorigin="anonymous"></script>
+</head>
+<body>
+    <div>
+        <input type="text" id="n1">
+        <input type="text" id="n2">
+        <br>
+        <Button onclick="Arthmetic('+')">+</Button>
+        <Button onclick="Arthmetic('-')">-</Button>
+        <Button onclick="Arthmetic('*')">*</Button>
+        <Button onclick="Arthmetic('/')">/</Button>
+
+        <script>
+            function Arthmetic(e){
+                var n1 = $("#n1").val();
+                var n2 = $("#n2").val();
+                var temp = eval(n1 + e + n2);
+                window.location.href="/result?value=" + temp;
+            }
+        </script>
+    </div>
+
+
+</body>
+</html>
